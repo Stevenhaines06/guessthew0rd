@@ -137,8 +137,14 @@ playAgainButton.addEventListener("click", function() {
     numRemainingGuesses = 8;
     guessedLetters = [];
     remainingGuessesSpan.innerText = `${numRemainingGuesses} guesses`;
+    guessedLettersElement.innerHTML = "";
+    message.innerText = "";
+    
+    
     guessLetterButton.classList.remove("hide");
+    playAgainButton.classList.add("hide");
     remainingGuessesElement.classList.remove("hide");
     guessedLettersElement.classList.remove("hide");
+    
     getWord();
 })
